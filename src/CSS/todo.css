@@ -1,0 +1,45 @@
+* { box-sizing: border-box; font-family: -apple-system, "SF Pro Text", "Segoe UI", sans-serif; }
+
+.todo-container {
+    max-width: 480px;
+    margin: 40px auto;
+    background: #f2f2f7;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.todo-title { text-align: center; color: #1c1c1e; font-weight: 600; }
+
+.formulario-tarea { display: flex; margin-bottom: 12px; }
+.formulario-tarea input {
+    flex: 1; padding: 10px 14px; border-radius: 12px; border: 1px solid #d1d1d6;
+    background: #fff; font-size: 15px;
+}
+.formulario-tarea button {
+    margin-left: 8px; background: #007aff; color: #fff; border: none;
+    border-radius: 12px; padding: 0 16px; font-weight: 600; cursor: pointer;
+}
+
+.filtro-tareas { display: flex; background: #e5e5ea; border-radius: 10px; padding: 3px; margin-bottom: 14px; }
+.filtro-tareas button {
+    flex: 1; border: none; background: transparent; padding: 6px 0;
+    border-radius: 8px; cursor: pointer; font-size: 14px; color: #1c1c1e;
+}
+.filtro-tareas button.activo { background: #fff; font-weight: 600; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+
+.lista-tareas { list-style: none; padding: 0; margin: 0; }
+.tarea-item {
+    display: flex; align-items: center; justify-content: space-between;
+    background: #fff; border-radius: 12px; padding: 12px 14px; margin-bottom: 8px;
+}
+.tarea-item.completada .tarea-texto { text-decoration: line-through; color: #8e8e93; }
+.tarea-texto { flex: 1; font-size: 15px; }
+.tarea-estado { font-size: 12px; color: #8e8e93; margin: 0 10px; }
+
+.btn-completar {
+    background: #34c759; color: #fff; border: none; border-radius: 8px;
+    padding: 6px 10px; font-size: 13px; margin-right: 6px; cursor: pointer;
+}
+.tarea-item.completada .btn-completar { background: #ff9500; }
+.btn-eliminar { background: none; border: none; font-size: 16px; cursor: pointer; }
