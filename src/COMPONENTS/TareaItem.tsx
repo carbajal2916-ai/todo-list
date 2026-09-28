@@ -1,11 +1,9 @@
 import type { Tarea } from '../TS/tarea-list';
-
 interface Props {
     tarea: Tarea;
     onEliminar: (id: number) => void;
     onCompletar: (id: number) => void;
 }
-
 export const TareaItem = ({ tarea, onEliminar, onCompletar }: Props) => {
     let clase = 'tarea-item';
     let textoEstado = 'Pendiente';
@@ -16,7 +14,6 @@ export const TareaItem = ({ tarea, onEliminar, onCompletar }: Props) => {
         textoEstado = 'Completada';
         textoBoton = 'Deshacer';
     }
-
     return (
         <li className={clase}>
             <span className="tarea-texto">{tarea.tarea}</span>
